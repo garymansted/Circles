@@ -22,6 +22,7 @@ class Circle: UIView {
         let pinchRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(Circle.detectPinch(_:)))
         self.gestureRecognizers = [panRecognizer, doubleTapRecognizer, pinchRecognizer]
         self.isUserInteractionEnabled = true
+        self.layer.cornerRadius = self.frame.width / 2
     }
     
     // MARK: - Init Coder
