@@ -42,7 +42,6 @@ class MainVC: UIViewController {
             DispatchQueue.main.async {
                 let circle = Circle(frame: CGRect(x: x, y: y, width: CGFloat(randomRadius), height: CGFloat(randomRadius)))
                 UIView.animate(withDuration: 0.1, animations: {
-                    // circle.layer.cornerRadius = circle.frame.width / 2
                     circle.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1.0)
                     self.circles.append(circle)
                     self.view.addSubview(circle)

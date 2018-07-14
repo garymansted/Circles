@@ -13,7 +13,7 @@ class Circle: UIView {
     var colorIsSet = false
     var lastLocation = CGPoint(x: 0, y: 0)
     
-    // MARK: - Init
+    // MARK: - Init -
     override init(frame: CGRect) {
         super.init(frame: frame)
         let panRecognizer = UIPanGestureRecognizer(target: self, action:#selector(Circle.detectPan(_:)))
