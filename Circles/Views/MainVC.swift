@@ -81,7 +81,6 @@ class MainVC: UIViewController {
             })
         }
     }
-
 }
 
 // END REGION
