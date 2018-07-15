@@ -14,7 +14,7 @@ class ColorController {
         var errorString: String? = nil
         var randomColor = UIColor()
         DispatchQueue.global(qos: .userInteractive).async {
-            var request = URLRequest(url: randomColorURL!)
+            var request = URLRequest(url: RANDOM_COLOR_URL!)
             request.httpMethod = "POST"
             request.httpBody = try? JSONSerialization.data(withJSONObject: [], options: [])
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
