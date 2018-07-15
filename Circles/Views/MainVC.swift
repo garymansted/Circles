@@ -41,10 +41,10 @@ class MainVC: UIViewController {
             let y = xy.y - (CGFloat(randomRadius) - (CGFloat(randomRadius) / 2))
             DispatchQueue.main.async {
                 let circle = Circle(frame: CGRect(x: x, y: y, width: CGFloat(randomRadius), height: CGFloat(randomRadius)))
+                circle.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1.0)
+                self.circles.append(circle)
+                self.view.addSubview(circle)
                 UIView.animate(withDuration: 0.1, animations: {
-                    circle.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1.0)
-                    self.circles.append(circle)
-                    self.view.addSubview(circle)
                     circle.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
                 }, completion: { (true) in
                     UIView.animate(withDuration: 0.1, animations: {
