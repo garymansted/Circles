@@ -8,4 +8,4 @@
 
 import Foundation
 
-let RANDOM_COLOR_URL = URL(string: "http://www.colourlovers.com/api/colors/random?format=json")
+let RANDOM_COLOR_GENERATOR_URL = URL(string: "http://www.colourlovers.com/api/colors/random?format=json")
