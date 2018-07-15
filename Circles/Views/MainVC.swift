@@ -12,7 +12,7 @@ class MainVC: UIViewController {
 
     var circles = [Circle]()
     
-    // MARK: - View Did Load
+    // MARK: - View Did Load -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
