@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ColorController {
-    static func getRandomColor(completion: @escaping (String?, UIColor) -> ()) {
+    func getRandomColor(completion: @escaping (String?, UIColor) -> ()) {
         var errorString: String? = nil
         var randomColor = UIColor()
         DispatchQueue.global(qos: .userInteractive).async {

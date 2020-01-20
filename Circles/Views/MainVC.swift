@@ -11,6 +11,7 @@ import UIKit
 class MainVC: UIViewController {
 
     var circles = [Circle]()
+    let colorController = ColorController()
     
     // MARK: - View Did Load -
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class MainVC: UIViewController {
     }
 
     // MARK: - Shake Motion Ended
-    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             for c in circles {
                 c.removeFromSuperview()
@@ -52,7 +53,7 @@ class MainVC: UIViewController {
                     })
                 })
             }
-            ColorController.getRandomColor(completion: { (error, color) in
+            colorController.getRandomColor(completion: { (error, color) in
                 if error != nil {
                     let blue = CGFloat(Int(arc4random() % 255)) / 255.0
                     let green = CGFloat(Int(arc4random() % 255)) / 255.0

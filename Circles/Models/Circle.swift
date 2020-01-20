@@ -12,6 +12,7 @@ class Circle: UIView {
     
     var colorIsSet = false
     var lastLocation = CGPoint(x: 0, y: 0)
+    let colorController = ColorController()
     
     // MARK: - Init -
     override init(frame: CGRect) {
@@ -38,7 +39,7 @@ class Circle: UIView {
     
     // MARK: - Circle Double Tap Guesture
     @objc func detectDoubleTap(_ recognizer: UITapGestureRecognizer) {
-        ColorController.getRandomColor(completion: { (error, color) in
+        colorController.getRandomColor(completion: { (error, color) in
             if error != nil {
                 let blue = CGFloat(Int(arc4random() % 255)) / 255.0
                 let green = CGFloat(Int(arc4random() % 255)) / 255.0
@@ -62,8 +63,8 @@ class Circle: UIView {
     }
     
     // MARK: - Touches Began
-    override func touchesBegan(_ touches: (Set<UITouch>!), with event: UIEvent!) {
-        self.superview?.bringSubview(toFront: self)
+    override func touchesBegan(_ touches: (Set<UITouch>?), with event: UIEvent!) {
+        self.superview?.bringSubviewToFront(self)
         lastLocation = self.center
     }
 
