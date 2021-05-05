@@ -10,8 +10,8 @@ import UIKit
 
 class MainVC: UIViewController {
 
-    var circles = [Circle]()
-    let colorController = ColorController()
+    private var circles = [Circle]()
+    private let colorService = ColorService()
     
     // MARK: - View Did Load -
     override func viewDidLoad() {
@@ -53,7 +53,7 @@ class MainVC: UIViewController {
                     })
                 })
             }
-            colorController.getRandomColor(completion: { (error, color) in
+            colorService.getRandomColor(completion: { (error, color) in
                 if error != nil {
                     let blue = CGFloat(Int(arc4random() % 255)) / 255.0
                     let green = CGFloat(Int(arc4random() % 255)) / 255.0

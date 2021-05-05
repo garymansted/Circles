@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C2A8E30A20F856390084BE5E /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8E30920F856390084BE5E /* Configs.swift */; };
+		C2EBEF252642513F009861E1 /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EBEF242642513F009861E1 /* ColorService.swift */; };
 		C2EE664B20F81CCE008243D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE664A20F81CCE008243D8 /* AppDelegate.swift */; };
 		C2EE665020F81CCE008243D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EE664E20F81CCE008243D8 /* Main.storyboard */; };
 		C2EE665220F81CCE008243D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EE665120F81CCE008243D8 /* Assets.xcassets */; };
 		C2EE665520F81CCE008243D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EE665320F81CCE008243D8 /* LaunchScreen.storyboard */; };
 		C2EE665D20F81D1D008243D8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE665C20F81D1D008243D8 /* MainVC.swift */; };
 		C2EE666020F81D71008243D8 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE665F20F81D71008243D8 /* Circle.swift */; };
-		C2EE666320F81DA3008243D8 /* ColorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE666220F81DA3008243D8 /* ColorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C2A8E30920F856390084BE5E /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		C2EBEF242642513F009861E1 /* ColorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
 		C2EE664720F81CCE008243D8 /* Circles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EE664A20F81CCE008243D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EE664F20F81CCE008243D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		C2EE665620F81CCE008243D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2EE665C20F81D1D008243D8 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C2EE665F20F81D71008243D8 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
-		C2EE666220F81DA3008243D8 /* ColorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2EBEF2926425331009861E1 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				C2EBEF242642513F009861E1 /* ColorService.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
 		C2EE663E20F81CCE008243D8 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +83,7 @@
 		C2EE665E20F81D23008243D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C2EE665C20F81D1D008243D8 /* MainVC.swift */,
+				C2EE665F20F81D71008243D8 /* Circle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -83,7 +91,7 @@
 		C2EE666120F81D75008243D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C2EE665F20F81D71008243D8 /* Circle.swift */,
+				C2EBEF2926425331009861E1 /* NetworkServices */,
 				C2A8E30920F856390084BE5E /* Configs.swift */,
 			);
 			path = Models;
@@ -92,7 +100,7 @@
 		C2EE666420F81DA9008243D8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2EE666220F81DA3008243D8 /* ColorController.swift */,
+				C2EE665C20F81D1D008243D8 /* MainVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,8 +181,8 @@
 				C2A8E30A20F856390084BE5E /* Configs.swift in Sources */,
 				C2EE664B20F81CCE008243D8 /* AppDelegate.swift in Sources */,
 				C2EE665D20F81D1D008243D8 /* MainVC.swift in Sources */,
+				C2EBEF252642513F009861E1 /* ColorService.swift in Sources */,
 				C2EE666020F81D71008243D8 /* Circle.swift in Sources */,
-				C2EE666320F81DA3008243D8 /* ColorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

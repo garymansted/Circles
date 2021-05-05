@@ -1,5 +1,5 @@
-//
-//  ColorController.swift
+////
+//  ColorService.swift
 //  Circles
 //
 //  Created by Gary Mansted on 13/7/18.
@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class ColorController {
+class ColorService: NSObject {
+    
     func getRandomColor(completion: @escaping (String?, UIColor) -> ()) {
         var errorString: String? = nil
         var randomColor = UIColor()
@@ -57,4 +58,5 @@ class ColorController {
             task.resume()
         }
     }
+    
 }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class Circle: UIView {
+final class Circle: UIView {
     
     var colorIsSet = false
-    var lastLocation = CGPoint(x: 0, y: 0)
-    let colorController = ColorController()
+    private var lastLocation = CGPoint(x: 0, y: 0)
+    private let colorService = ColorService()
     
     // MARK: - Init -
     override init(frame: CGRect) {
@@ -39,7 +39,7 @@ class Circle: UIView {
     
     // MARK: - Circle Double Tap Guesture
     @objc func detectDoubleTap(_ recognizer: UITapGestureRecognizer) {
-        colorController.getRandomColor(completion: { (error, color) in
+        colorService.getRandomColor(completion: { (error, color) in
             if error != nil {
                 let blue = CGFloat(Int(arc4random() % 255)) / 255.0
                 let green = CGFloat(Int(arc4random() % 255)) / 255.0
