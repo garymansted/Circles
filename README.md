@@ -21,3 +21,4 @@ Developed for the iPhone (*iPhone 6 ~> current model*)<br>
 - 
 *No third party libraries have been used.*
 
+cc-by-4.0
