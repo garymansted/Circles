@@ -4,8 +4,8 @@ Small app written in Swift 4 for a coding challenge EDIT: *Updated to Swift 5*
 ## Release Notes
 **Circles** is written in `Swift ~> 5.0`.<br>
 iOS `Target: ~> 13.0`<br>
-Built in `Xcode 12.3`<br> 
-Developed for the iPhone (*iPhone X ~> current model*)<br>
+Initially Built in `Xcode 10` - Currently will build in `Xcode 12.3`<br> 
+Developed for the iPhone (*iPhone 6 ~> current model*)<br>
 
 ## Requirements 
 ### Backlog
