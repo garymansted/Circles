@@ -7,6 +7,15 @@ iOS `Target: ~> 10.0`<br>
 Initially Built in `Xcode 10` - Currently will build in `Xcode 12.3`<br> 
 Developed for the iPhone (*iPhone 6 ~> current model*)<br>
 
+## Circles
+<p align="left">
+    <img src="/assets/CirclesDemo.gif" width="225" height="451" title="Circles - Coding Challenge App">
+    <img src="/assets/Circles_Image_0.png" width="169" height="365" title="Circles - Coding Challenge App">
+    <img src="/assets/Circles_Image_2.png" width="169" height="365" title="Circles - Coding Challenge App">
+    <img src="/assets/Circles_Image_3.png" width="169" height="365" title="Circles - Coding Challenge App">
+    <img src="/assets/Circles_Image_4.png" width="169" height="365" title="Circles - Coding Challenge App">
+</p>
+
 ## Requirements 
 ### Backlog
 - A user can spawn an infinite number of circles by tapping on the main view. 
@@ -20,3 +29,10 @@ Developed for the iPhone (*iPhone 6 ~> current model*)<br>
 - A user can skake the divice to remove all circles in the view.
 - 
 *No third party libraries have been used.*
+
+```
+Frameworks and third party librarys include:
+UIKit
+----
+URLSession was used for network requests
+```
