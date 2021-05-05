@@ -1,9 +1,9 @@
 # Circles
-Small app written in Swift 4 for a coding challenge
+Small app written in Swift 4 for a coding challenge EDIT: Updated to Swift 5
 
 Release Notes:
 
-Deployment target: iOS 10.0 +
+Deployment target: iOS 11.0 +
 
 A user can spawn an infinite number of circles by tapping on the main view. 
 The newly created circle animates by scaling it's size. 
