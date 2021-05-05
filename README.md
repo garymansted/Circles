@@ -20,5 +20,3 @@ Developed for the iPhone (*iPhone 6 ~> current model*)<br>
 - A user can skake the divice to remove all circles in the view.
 - 
 *No third party libraries have been used.*
-
-cc-by-4.0
