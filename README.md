@@ -10,7 +10,7 @@ Developed for the iPhone (*iPhone 6 ~> current model*)<br>
 ## Circles
 <p align="left">
     <img src="/assets/CirclesDemo.gif" width="225" height="451" title="Circles - Coding Challenge App">
-    <img src="/assets/Circles_Image_0.png" width="169" height="365" title="Circles - Coding Challenge App">
+    <img src="/assets/Circles_Image_1.png" width="169" height="365" title="Circles - Coding Challenge App">
     <img src="/assets/Circles_Image_2.png" width="169" height="365" title="Circles - Coding Challenge App">
     <img src="/assets/Circles_Image_3.png" width="169" height="365" title="Circles - Coding Challenge App">
     <img src="/assets/Circles_Image_4.png" width="169" height="365" title="Circles - Coding Challenge App">
