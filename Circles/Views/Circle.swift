@@ -44,13 +44,13 @@ final class Circle: UIView {
                 let blue = CGFloat(Int(arc4random() % 255)) / 255.0
                 let green = CGFloat(Int(arc4random() % 255)) / 255.0
                 let red = CGFloat(Int(arc4random() % 255)) / 255.0
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+                UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                    self?.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
                 })
             }
             else {
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.backgroundColor = color
+                UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                    self?.backgroundColor = color
                 })
             }
         })
