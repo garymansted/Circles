@@ -40,11 +40,11 @@ class MainVC: UIViewController {
             let randomRadius = arc4random_uniform(101) + 40
             let x = xy.x - (CGFloat(randomRadius) - (CGFloat(randomRadius) / 2))
             let y = xy.y - (CGFloat(randomRadius) - (CGFloat(randomRadius) / 2))
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
                 let circle = Circle(frame: CGRect(x: x, y: y, width: CGFloat(randomRadius), height: CGFloat(randomRadius)))
                 circle.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1.0)
-                self.circles.append(circle)
-                self.view.addSubview(circle)
+                self?.circles.append(circle)
+                self?.view.addSubview(circle)
                 UIView.animate(withDuration: 0.1, animations: {
                     circle.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
                 }, completion: { (true) in
@@ -53,30 +53,28 @@ class MainVC: UIViewController {
                     })
                 })
             }
-            colorService.getRandomColor(completion: { (error, color) in
+            colorService.getRandomColor(completion: { [weak self] (error, color) in
                 if error != nil {
                     let blue = CGFloat(Int(arc4random() % 255)) / 255.0
                     let green = CGFloat(Int(arc4random() % 255)) / 255.0
                     let red = CGFloat(Int(arc4random() % 255)) / 255.0
-                    for c in self.circles {
-                        if c.colorIsSet == false {
-                            c.colorIsSet = true
-                            UIView.animate(withDuration: 0.3, animations: {
-                                c.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-                            })
-                            break
-                        }
+                    guard let circleObjects = self?.circles else { return }
+                    for c in circleObjects where !c.colorIsSet {
+                        c.colorIsSet = true
+                        UIView.animate(withDuration: 0.3, animations: {
+                            c.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+                        })
+                        break
                     }
                 }
                 else {
-                    for c in self.circles {
-                        if c.colorIsSet == false {
-                            c.colorIsSet = true
-                            UIView.animate(withDuration: 0.3, animations: {
-                                c.backgroundColor = color
-                            })
-                            break
-                        }
+                    guard let circleObjects = self?.circles else { return }
+                    for c in circleObjects where !c.colorIsSet {
+                        c.colorIsSet = true
+                        UIView.animate(withDuration: 0.3, animations: {
+                            c.backgroundColor = color
+                        })
+                        break
                     }
                 }
             })
